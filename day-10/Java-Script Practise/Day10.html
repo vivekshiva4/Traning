@@ -1,0 +1,156 @@
+<html>
+<p id="a"></p>
+<script>
+document.getElementById("a").innerHTML="hello";
+</script>
+
+<hr>
+
+<p id="b" ></p>
+<script>
+var x=20;
+document.getElementById("b").innerHTML=x;
+</script>
+
+<hr>
+
+<p id="c" ></p>
+<script>
+var x=20;
+var y="kittu"
+document.getElementById("c").innerHTML=x+y;
+</script>
+
+<hr>
+
+<p id="d" ></p>
+<script>
+var x=20;
+var y="kittu";
+var z=x+y;
+document.getElementById("d").innerHTML=(20+20+z);
+</script>
+
+<hr>
+
+<p id="e" ></p>
+<button onclick="myFunction()">click</button>
+<script>
+function myFunction(){
+var x=20;
+document.getElementById("e").innerHTML=x;
+}
+</script>
+
+<hr>
+
+<p id="f" ></p>
+<p id="f1" ></p>
+<p id="f2" ></p>
+<p id="f3" ></p>
+<p id="f4" ></p>
+<script>
+var x=200;
+var y=20;
+var z=20e-20;
+
+document.getElementById("f").innerHTML=x+y*560;
+document.getElementById("f1").innerHTML=x-y;
+document.getElementById("f2").innerHTML=x*y;
+document.getElementById("f3").innerHTML=x/y;
+document.getElementById("f4").innerHTML=z;
+</script>
+
+<hr>
+
+<p id="g" ></p>
+<script>
+var x=["kittu",1,2,'b',8,1,'a',0,4,'p',9,"vivek"];
+document.getElementById("g").innerHTML=x[0]+" "+x[1]+" "+x[2]+" "+x[3]+" "+x[4]+" "+x[5]+" "+x[6]+" "+x[7]+" "+x[8]+" "+x[9]+" "+x[10]+" "+x[11];
+</script>
+
+<hr><h1>
+
+<p id="h" ></p>
+<script>
+var vivek={name:"vivek",age:23,location:"hyderabad"};
+document.getElementById("h").innerHTML=vivek.name+" age is "+vivek.age+" And Location is "+vivek.location;
+</script>
+
+<hr>
+
+<p id="i"></p>
+<script>
+function myFunction(p1, p2) {
+    return p1 * p2;
+}
+document.getElementById("i").innerHTML = myFunction(4, 3);
+</script>
+
+<hr>
+
+<p id="j"></p>
+<script>
+function myFunction(p1, p2) {
+    return p1 * p2;
+}
+var x=myFunction(2,3);
+document.getElementById("j").innerHTML = x;
+</script>
+
+<hr>
+
+<p id="k"></p>
+<script>
+function myFunction(p1) {
+    return (5/9)*(p1-32);
+}
+document.getElementById("k").innerHTML = myFunction(45);
+</script>
+
+<hr>
+
+<p id="l">Display the result here.</p>
+<script>
+function myFunction(name){
+ return name;
+ }
+ document.getElementById("l").innerHTML=myFunction("Hello World");
+</script>
+
+<hr>
+
+<p id="m"></p>
+<script>
+ var car={name:"ford",model:2016,Type:"sedan"};
+ document.getElementById("m").innerHTML=car.name+" "+car.model+" "+car.Type;
+</script>
+
+<hr>
+
+<p id="n"></p>
+<script>
+ myFunction();
+ var carName='benz';
+ var x=10;
+ function myFunction(){
+ document.getElementById("n").innerHTML="car name is "+carName+x;
+ }
+</script>
+
+<hr>
+
+<p id="o"></p>
+<button onclick="document.getElementById("o").innerHTML=Date()"; >
+						time is
+</button>
+
+<hr>
+
+<span onmouseover="this.style.color='red'">click</span>
+
+<p id="p"></p>
+<script>
+</script>
+
+</html>
