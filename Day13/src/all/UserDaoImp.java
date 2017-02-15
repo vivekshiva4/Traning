@@ -19,7 +19,7 @@ public class UserDaoImp implements UserDao{
 	private static final String DELETE = "DELETE FROM student WHERE id=?";
 	private static final String FIND_ALL = "SELECT * FROM student";
 	private static final String FIND_BY_ID = "SELECT * FROM student WHERE id=?";
-	private static final String INSERT = "INSERT INTO student VALUES(?, ?)";
+	//private static final String INSERT = "INSERT INTO student VALUES(?, ?)";
 	private static final String UPDATE = "UPDATE student SET name=? WHERE id=?";
 	
 	@Override
@@ -93,11 +93,24 @@ public class UserDaoImp implements UserDao{
 			throw new RuntimeException(e);
 		} 
 	}
-	/*
-	@Override
+	
+	/*@Override
 	public int update(User user) {
-		return 0;
-	}*/
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		
+		try {
+			conn = getConnection();
+			stmt = conn.prepareStatement(UPDATE);
+			stmt.setString(1, user.getSname());
+			
+			return stmt.executeUpdate();
+		} catch (SQLException e) {
+			// e.printStackTrace();
+			throw new RuntimeException(e);
+		} 
+	}
+	*/
 	private Connection getConnection() {
 		try {
 			Class.forName(DRIVER_NAME);
