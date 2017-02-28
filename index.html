@@ -1,0 +1,41 @@
+<html ng-app="MyApp">
+
+<head>
+    <title>Calculator App</title>
+    <script src="angular.js"></script>
+    <script src="a.js"></script>
+</head>
+
+<body bgcolor="lightgreen">
+    <table border="1" align="center" bgcolor="skyblue" width="1355">
+        <td>
+            <h1 align="center">Calculator App</h1>
+        </td>
+    </table>
+    <br><br>
+    <table align="center" border="5">
+        <td>
+            <br>
+            <div ng-controller="Calculatorcntrl as c">
+                <input type="text" ng-model="c.input1"></input>
+                <span ng-bind="c.selectedOperation"></span>
+                <input type="text" ng-model="c.input2"></input>
+                <button ng-click="c.compute()">=</button>
+                <span ng-bind="c.resultValue"></span>
+
+                <p>
+                    Choose Operator:
+                    <button ng-click="c.buttonClicked('+')">+</button>
+                    <button ng-click="c.buttonClicked('-')">-</button>
+                    <button ng-click="c.buttonClicked('*')">*</button>
+                    <button ng-click="c.buttonClicked('/')">/</button>
+                </p>
+                <br>
+            </div>
+        </td>
+    </table>
+    <br><br><br> <br><br><br> <br><br><br> <br><br><br>
+    <font color="red"><i><h1 align="end">This Page is Developed By Shiva Vivek</h1></font>
+</body>
+
+</html>
