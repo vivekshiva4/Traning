@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="emp" name="n1,n2" class="com.Employee" scope="singleton">
+<property name="empId" value="1024"></property>
+<property name="empName" value="kittu"></property>
+</bean>
+
+<bean id="emp1" name="n3,n4" class="com.Employee" scope="prototype">
+<property name="empId" value="200"></property>
+</bean>
+
+<bean id="emp2" name="n6,n5" class="com.Employee" scope="prototype"/>
+<bean id="emp3" name="n7,n8" class="com.Employee" scope="singleton"/>
+
+</beans>
