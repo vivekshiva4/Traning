@@ -1,0 +1,42 @@
+<html ng-app="myApp">
+    <head>
+        <script src="angular.js"></script>
+        <script src="One.js"></script>
+    </head>
+
+    <body>
+        <input type="text" ng-model="name">
+        <div>Hello {{name}}</div>
+
+        <div ng-bind="name"></div>
+        <div>10*10={{10*10}}<br>10+10={{10+10}}</div>
+        
+        <div ng-init="language='Angular'">
+        {{language}}
+Your Fav LAngauge is<input type="text" ng-model="language">{{language}}
+        </div>
+
+        <div ng-init="myLanguage=[{name:'vivek',age:'20'},{name:'kittu',age:'25'},{name:'vicky',age:20}]">
+        <p ng-repeat="l in myLanguage">
+            Name is :{{l.name}}<br>
+            Age is :{{l.age}}<br>
+        </p>
+        
+        </div>
+
+        <div ng-controller="language">
+            <button ng-click="php()">Php</button>
+            <button ng-click="java()">Java</button>
+            <p>Selected languaue is:{{myFavLAngaue}}</p>
+        </div>
+
+        <div >Text:<input type="text" ng-model="filter">
+        Vlaues is: <br>Uppercase:{{filter | uppercase}}
+        <br>Lowercase:{{filter | lowercase}}
+        <br>currency:{{filter | currency}}
+        <br>Currency india:{{filter | currency:"Rs."}}
+        <br>Number{{filter | number:2}}
+        </div>
+
+    </body>
+</html>
