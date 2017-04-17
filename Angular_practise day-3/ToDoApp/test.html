@@ -1,0 +1,22 @@
+<html>
+
+<head>
+<script src="angular.js"></script>
+<script src="test.js"></script>
+<script src="angular-route-min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="app">
+
+<h1 align="center">ToDoApp</h1>
+<p align="center"><input ng-keyup="searchEnter()" type="text"  ng-model="task"></p>
+
+<ul>
+<li ng-repeat="one in tasks">
+{{one}}
+
+</li>
+
+</ul>
+</body>
+</html>
